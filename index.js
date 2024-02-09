@@ -19,7 +19,9 @@ mongoose.connect(url)
 // {{$randomFullName}}"
 const {Schema} = mongoose
 // const userSchema = new mongoose.Schema({
-    // below schema working but issue with required key
+ // unique true - mongoose creates an index on that field
+ // required true- ensure that field value is not null
+
 const userSchema = new Schema({
     firstName: {
         type: String,
@@ -32,6 +34,7 @@ const userSchema = new Schema({
     phone: {
         type: String,
         required: true,
+        unique: true,
     }
 });
 
