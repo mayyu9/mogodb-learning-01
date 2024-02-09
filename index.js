@@ -22,17 +22,16 @@ const {Schema} = mongoose
     // below schema working but issue with required key
 const userSchema = new Schema({
     firstName: {
-        name: String,
-        // required: true
+        type: String,
+        required: true,
     },
     lastName: {
-        name: String,
-        // required: false
+        type: String,
+        required: false,
     },
     phone: {
-        name: String,
-        // unique: 'true'
-        // required: true
+        type: String,
+        required: true,
     }
 });
 
