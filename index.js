@@ -36,7 +36,7 @@ const userSchema = new Schema({
         required: true,
         unique: true,
     }
-});
+}, { timestamps: true });
 
 // const userSchema = new Schema({
 //     firstName: String,
